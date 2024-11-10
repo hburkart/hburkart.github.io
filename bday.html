@@ -52,6 +52,9 @@
     </style>
 </head>
 <body>
+  <!-- Greeting message (will be populated with JavaScript) -->
+    <div id="greeting" class="greeting"></div>
+    
     <!-- Language Switch Link at the top right (Optional) -->
     <a href="bday-de.html" class="language-switch">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png" alt="German Flag">
@@ -62,5 +65,23 @@
     <a href="https://www.amazon.de/hz/wishlist/ls/1D1FJHA7W2WJY?ref_=wl_share" target="_blank">
         <img src="Invitation.jpg" alt="You are invited!">
     </a>
+    
+    <script>
+        // Function to get URL parameters
+        function getURLParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the 'NAME' parameter from the URL
+        const name = getURLParameter('NAME');
+
+        // Display the greeting message if the NAME parameter exists
+        if (name) {
+            document.getElementById('greeting').textContent = "You are invited, " + name + "!";
+        } else {
+            document.getElementById('greeting').textContent = "You are invited!";
+        }
+    </script>
 </body>
 </html>
