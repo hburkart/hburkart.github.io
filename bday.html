@@ -5,30 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
     <style>
-        /* Container for the images */
-        .image-container {
+        /* General page styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height of the viewport */
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between images */
+            align-items: center; /* Centers content vertically and horizontally */
+            background-color: #f0f0f0; /* Light background color */
         }
-        .image-container a {
-            display: inline-block;
-        }
+
         img {
-            width: 300px; /* Set a fixed size for the images */
+            width: 80%; /* Set the width of the image to 80% of the viewport */
+            max-width: 900px; /* Set a maximum width */
+            height: auto; /* Maintain the aspect ratio */
+            border: 1px solid #ccc; /* Optional: Adds a border around the image */
+        }
+
+        /* Optional: Style for the top right language link (still kept for reference) */
+        .language-switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .language-switch img {
+            width: 20px; /* German flag size */
             height: auto;
-            border: 1px solid #ccc; /* Optional: Adds a border around the images */
+            margin-right: 5px;
+        }
+
+        .language-switch:hover {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <a href="https://www.google.com">
-            <img src="Invitation.jpg" alt="You are invited!">
-        </a>
-        <a href="https://www.google.com">
-            <img src="Einladung.jpg" alt="Du bist eingeladen!">
-        </a>
-    </div>
+    <!-- Language Switch Link at the top right (Optional) -->
+    <a href="bday-de.html" class="language-switch">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png" alt="German Flag">
+        Deutsch
+    </a>
+
+    <!-- Single Centered Image -->
+    <img src="Invitation.jpg" alt="You are invited!">
 </body>
 </html>
